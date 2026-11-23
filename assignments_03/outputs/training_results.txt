@@ -1,0 +1,56 @@
+Task 1 original shape: (365, 5)
+Task 1 first five rows:
+    temperature_2m_max  temperature_2m_min  ...  wind_speed_10m_max       date
+0                15.1                 3.5  ...                15.9 2023-01-01
+1                17.9                 8.7  ...                11.5 2023-01-02
+2                17.7                11.9  ...                28.8 2023-01-03
+3                15.4                 2.5  ...                20.1 2023-01-04
+4                10.0                 1.2  ...                22.6 2023-01-05
+
+[5 rows x 5 columns]
+Task 2 class counts (0=skip, 1=good):
+ good_for_running
+0    231
+1    134
+Name: count, dtype: int64
+Task 2 fraction good: 0.36712328767123287
+Task 3 k=1: CV accuracy=0.908
+Task 3 k=3: CV accuracy=0.897
+Task 3 k=5: CV accuracy=0.901
+Task 3 k=7: CV accuracy=0.887
+Task 3 k=9: CV accuracy=0.884
+Task 3 k=11: CV accuracy=0.870
+Task 3 k=15: CV accuracy=0.870
+Task 3 k=21: CV accuracy=0.856
+Task 3 chosen k: 1
+Task 3 KNN test accuracy: 0.9315068493150684
+Task 3 KNN classification report:
+               precision    recall  f1-score   support
+
+           0       0.98      0.91      0.94        46
+           1       0.87      0.96      0.91        27
+
+    accuracy                           0.93        73
+   macro avg       0.92      0.94      0.93        73
+weighted avg       0.94      0.93      0.93        73
+
+Task 4 logistic test accuracy: 0.6438356164383562
+Task 4 precision: 0.5384615384615384
+Task 4 recall: 0.25925925925925924
+Task 4 F1: 0.35
+Task 4 classification report:
+               precision    recall  f1-score   support
+
+           0       0.67      0.87      0.75        46
+           1       0.54      0.26      0.35        27
+
+    accuracy                           0.64        73
+   macro avg       0.60      0.56      0.55        73
+weighted avg       0.62      0.64      0.61        73
+
+Task 4 temperature_2m_max: +0.027
+Task 4 temperature_2m_min: -0.312
+Task 4 precipitation_sum: -1.796
+Task 4 wind_speed_10m_max: +0.209
+Task 5 KNN vs logistic accuracy: 0.9315068493150684 0.6438356164383562
+Task 6 saved: models/weather_classifier.pkl and models/weather_classifier_metadata.json
