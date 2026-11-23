@@ -1,0 +1,19 @@
+{
+  "python_version": "3.12.15",
+  "scikit_learn_version": "1.9.1",
+  "feature_names": [
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "wind_speed_10m_max"
+  ],
+  "label_rule": "good=1 when 7 <= daily high <= 26 C, daily low >= 0 C, precipitation < 3 mm, and max wind < 30 km/h; otherwise skip=0",
+  "city": "Louisville, Kentucky, USA",
+  "year": 2023,
+  "model_type": "StandardScaler + KNeighborsClassifier(k=1)",
+  "test_accuracy": 0.9315068493150684,
+  "test_f1": 0.9122807017543859,
+  "knn_test_accuracy": 0.9315068493150684,
+  "logreg_test_accuracy": 0.6438356164383562,
+  "best_k": 1
+}
